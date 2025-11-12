@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { ArrowRight, Github, Linkedin, Mail, Globe, FolderGit2, Code2, Star } from 'lucide-react'
+import Navbar from './components/Navbar'
 
 function Badge({ children }) {
   return (
@@ -83,26 +84,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen scroll-smooth bg-gradient-to-br from-white to-blue-50 text-gray-900">
-      {/* Navbar */}
-      <header className="fixed inset-x-0 top-0 z-50 border-b border-white/50 bg-white/70 backdrop-blur">
-        <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-          <a href="#home" className="flex items-center gap-2">
-            <div className="h-7 w-7 rounded-md bg-gradient-to-br from-blue-600 to-purple-600" />
-            <span className="text-sm font-semibold">Your Name</span>
-          </a>
-          <nav className="hidden gap-6 md:flex">
-            <a href="#about" className="text-sm font-medium text-gray-700 hover:text-blue-600">About</a>
-            <a href="#projects" className="text-sm font-medium text-gray-700 hover:text-blue-600">Projects</a>
-            <a href="#skills" className="text-sm font-medium text-gray-700 hover:text-blue-600">Skills</a>
-            <a href="#contact" className="text-sm font-medium text-gray-700 hover:text-blue-600">Contact</a>
-          </nav>
-          <div className="hidden items-center gap-2 md:flex">
-            <a href="https://github.com/" target="_blank" rel="noreferrer" className="rounded p-2 hover:bg-gray-100"><Github className="h-5 w-5" /></a>
-            <a href="https://linkedin.com/" target="_blank" rel="noreferrer" className="rounded p-2 hover:bg-gray-100"><Linkedin className="h-5 w-5" /></a>
-            <a href="#contact" className="rounded p-2 hover:bg-gray-100"><Mail className="h-5 w-5" /></a>
-          </div>
-        </div>
-      </header>
+      <Navbar />
 
       {/* Hero */}
       <section id="home" className="relative flex min-h-[90vh] items-center pt-24">
